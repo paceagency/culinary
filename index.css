@@ -1,0 +1,42 @@
+.body{
+    background-image: url('background4.png');
+    padding-bottom: 20px;
+    min-height: 100vh;
+
+}
+/* Add custom CSS for marquee */
+marquee {
+    background-color: teal; /* Set background color to teal */
+    color: white; /* Set text color to white */
+    font-family: 'Times New Roman', Times, serif; /* Set font family to Times New Roman */
+    font-weight: bold; /* Set font weight to bold */
+}
+
+.logo{
+        text-align: center}
+.headName{
+    color: rgb(34, 34, 97);
+    text-align: center;
+    padding-top: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#msg{
+    text-align: center;
+    color: red;
+    display: none;
+    margin-bottom: 20px;
+}
+#items{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.singleItem{
+    cursor: pointer;
+}
+#details{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CULINARY CREATIONS</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <style>
+        /* Add custom CSS for navigation bar */
+        body {
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.5); /* Add a transparent background color for better readability */
+            text-align: center;
+            width: 100%;
+            justify-content: center;
+        }
+        .navbar-nav .nav-link {
+            color: #3ae4e4;
+            transition: color 0.3s ease;
+            text-align: center;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #ffc107;
+        }
+        /* Style for the popup container */
+        .popup-container {
+            background-color: #3498db;
+            color: #5aec66;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(72, 202, 89, 0.3);
+            max-width: 80%;
+            margin: 50px auto;
+            text-align: center;
+        }
+        /* Style for the form */
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-control {
+            background-color: #3498db;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+        .btn-primary {
+            padding: 10px 20px;
+            background-color: #ffc107;
+            border: none;
+            border-radius: 5px;
+            color: #cbe728;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #ff4be1;
+        }
+        /* Style for the headName */
+        .headName {
+            background-color: #bf8f8f; /* Pea chocolate background color */
+            text-align: center;
+            padding: 20px 0; /* Add some padding for better visibility */
+        }
+    </style>
+</head>
+<body>
+    <marquee>WELCOME TO CULINARY CREATIONS Co - 0796151773 , where we believe in the power of delicious and nutritious food to transform lives.At Culinary Creations, our mission is simple: to provide you with the tools, resources, and inspiration you need to create healthy meals that nourish both body and soul. We understand that making healthy choices can sometimes feel overwhelming, which is why we're here to guide you every step of the way.Our team is passionate about food and nutrition, and we're dedicated to bringing you the best recipes, tips, and information to help you live your healthiest life. Whether you're a seasoned chef or just starting out in the kitchen, we have something for everyone.From vibrant salads and hearty soups to mouthwatering main courses and decadent desserts, our recipes are designed to be both nutritious and delicious. We believe that healthy eating should never compromise on flavor, and our recipes prove just that.In addition to our wide range of recipes, we also offer expert tips and advice on meal planning, grocery shopping, and cooking techniques. We want to empower you to make informed choices about the food you eat, so you can feel confident in your health journey.So whether you're looking to improve your eating habits, explore new flavors, or simply enjoy delicious food, Culinary Creations is here to inspire and support you every step of the way. Join us on our journey to better health through food – together, we can create a healthier, happier world, one meal at a time.</marquee>
+    <div class="body">
+        <h1 class="headName">CULINARY CREATIONS</h1>
+        <div class="logo"><img src="logo.png" alt="Culinary Creations Logo" style="max-width: 200px;"></div>
+
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="showAboutUs()">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="showTestimonials()">Testimonials</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="showContact()">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="showNotice()">Notice Board</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <form action="" class="col-md-6 m-auto py-5">
+            <div class="input-group mb-3">
+                <input type="text" id="inputName" class="form-control" placeholder="Search for a meal...." aria-label="Recipient's username" aria-describedby="button-addon2">
+                <button class="btn btn-primary" type="button" id="button">Search</button>
+            </div>
+        </form>
+
+        <div id="msg">
+            <h3>We Don't have the food you gave us. Please order something else or enquire 0796151773 .......</h3>
+        </div>
+
+        <div id="details">
+
+        </div>
+
+        <div id="items">
+
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-D/Y8bE/eYAP8aw+orPrLhQcBY4BqBtf6JDA6hR/wrk3IkvYC+1t4Q8abt5K8twNL" crossorigin="anonymous"></script>
+
+    <script>
+        function showAboutUs() {
+            var popupContent = `<div class="popup-container">
+                <p>Welcome to Culinary Creations, where we believe in the power of delicious and nutritious food to transform lives.</p>
+                <p>At Culinary Creations, our mission is simple: to provide you with the tools, resources, and inspiration you need to create healthy meals that nourish both body and soul. We understand that making healthy choices can sometimes feel overwhelming, which is why we're here to guide you every step of the way.</p>
+                <p>Our team is passionate about food and nutrition, and we're dedicated to bringing you the best recipes, tips, and information to help you live your healthiest life. Whether you're a seasoned chef or just starting out in the kitchen, we have something for everyone.</p>
+                <p>From vibrant salads and hearty soups to mouthwatering main courses and decadent desserts, our recipes are designed to be both nutritious and delicious. We believe that healthy eating should never compromise on flavor, and our recipes prove just that.</p>
+                <p>In addition to our wide range of recipes, we also offer expert tips and advice on meal planning, grocery shopping, and cooking techniques. We want to empower you to make informed choices about the food you eat, so you can feel confident in your health journey.</p>
+                <p>So whether you're looking to improve your eating habits, explore new flavors, or simply enjoy delicious food, Culinary Creations is here to inspire and support you every step of the way. Join us on our journey to better health through food – together, we can create a healthier, happier world, one meal at a time.</p>
+            </div>`;
+
+            // Create a new popup window
+            var popupWindow = window.open('', 'About Us', 'width=600,height=400');
+            popupWindow.document.body.innerHTML = popupContent;
+        }
+        function showContact() {
+            var popupContent = `<div class="popup-container">
+                <p>call us: MANAGER +254796151773</p>
+                <p>Contact us at: <a href="mailto:itsculinary24@gmail.com">itsculinary24@gmail.com</a></p>
+            </div>`;
+
+            // Create a new popup window
+            var popupWindow = window.open('', 'Contact Us', 'width=600,height=400');
+            popupWindow.document.body.innerHTML = popupContent;
+        }
+        function showNotice() {
+            var popupContent = `<div class="popup-container">
+                <h3>Important Notice</h3>
+                <p>call us: MANAGER +254796151773</p>
+                <p>Contact us at: <a href="mailto:itsculinary24@gmail.com">itsculinary24@gmail.com</a></p>
+            </div>`;
+
+            // Create a new popup window
+            var popupWindow = window.open('', 'Notice Board', 'width=600,height=400');
+            popupWindow.document.body.innerHTML = popupContent;
+        }
+
+        // Function to show the testimonials form
+        function showTestimonials() {
+            var formContent = `<div class="popup-container">
+                <h2>Testimonials Form</h2>
+                <form action="mailto:itsculinary24@gmail.com" method="post" enctype="text/plain">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="First Name" name="first_name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Last Name" name="last_name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="Email Address" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Place of Origin/Country" name="country" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" rows="5" placeholder="Your Testimonial" name="testimonial" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>`;
+
+            // Create a new popup window
+            var popupWindow = window.open('', 'Testimonials Form', 'width=600,height=400');
+            popupWindow.document.body.innerHTML = formContent;
+        }
+    </script>
+</body>
+<script src="index.js"></script>
+</html>
